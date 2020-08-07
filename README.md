@@ -11,20 +11,18 @@ Eleverna delas in i grupper om mellan 5-8 personer. I varje grupp skall samtliga
 
 Eleverna uppmanas att rotera rollerna mellan varandra.
 
-Projekt inleds med att grupperna sammanställer en backlog av de kraven som finns specificerade nedan (Kravspecifikation). 
+Projekt inleds med att grupperna sammanställer en backlog dvs skapar krav som frmgår av bakrunden (se bakgrund), de tekninska kraven samt det initiala mötet med beställare (lärare).
 
 Grupperna förväntas ha daily scrum meetings.
 
-Projektet delas upp i sprintar som börjar 
+Projektet delas upp i sprintar som börjar den första lektionen i veckan. 
 
 Lärarna kommer agera beställare av ett system. 
 
-
-
 ## Bakgrund
 
-## Kravspecifikation
+## Tekniska krav
 
-### Tekniska krav
+1. Systemet skall bestå av en hemsida med tillhörande back-end.
+2. Systemet skall lagra data i en databas.
 
-### Funktionella krav
