@@ -32,6 +32,18 @@ namespace Sinder
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Validate connections string and App.config is set
+            try
+            {
+                string connstring = Helper.GetConnectionString();
+            }
+            catch (NullReferenceException e)
+            {
+                System.Diagnostics.Debug.Write("Set the upp the App.config plox. See README");
+            }
+
+            Dataprovider.Instance.TestConnection();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,7 +56,7 @@ namespace Sinder
             }
 
             // Mammas död att vi använder https.
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
