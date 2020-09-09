@@ -55,8 +55,20 @@ namespace Sinder
                 app.UseHsts();
             }
 
+            /// 404 handling
+            //app.Use(async (context, next) =>
+            //{
+            //    await next();
+            //    if (context.Response.StatusCode == 404)
+            //    {
+            //        //context.Request.Path = "/";
+            //        //context.Response.Body = "hello";
+            //        //await next();
+            //    }
+            //});
+
             // Mammas död att vi använder https.
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -72,11 +84,14 @@ namespace Sinder
                     name: "login",
                     pattern: "{controller=Login}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: "register",
                     pattern: "{controller=Registration}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: "search",
                     pattern: "{controller=Search}/{action=Index}/{id?}");
+                //endpoints.MapControllerRoute(
+                //    name: "api", 
+                //    pattern: "{controller=ApiController}/{action=Index}/{id?}");
             });
 
             // Live reload config
